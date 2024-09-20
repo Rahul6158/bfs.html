@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadth-First Search (BFS) in Data Structures</title>
+    <!-- Link to a single shared stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="font-weight: bolder;">Breadth-First Search (BFS) in Data Structures</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <h2>What is Breadth-First Search (BFS)?</h2>
+        <p>
+            <b>Breadth-First Search (BFS)</b> is an algorithm for traversing or searching tree or graph data structures. It explores all the vertices (or nodes) of a graph or tree level by level, starting from a given node (called the source or root). BFS uses a queue to keep track of nodes to explore next.
+        </p>
+    </section>
+
+    <!-- Key Concepts of BFS Section -->
+    <section id="key-concepts">
+        <h2>Key Concepts of BFS</h2>
+        <ul>
+            <li><b>Level-by-Level Traversal:</b> BFS starts at the source node and explores all its neighboring nodes first, before moving on to the next level.</li>
+            <li><b>Queue:</b> BFS uses a queue data structure to keep track of nodes to visit. The queue follows the First In, First Out (FIFO) principle, ensuring that nodes are processed in the correct order.</li>
+            <li><b>Unweighted Shortest Path:</b> BFS can be used to find the shortest path between two nodes in an unweighted graph because it explores nodes in the order of their distance from the source.</li>
+        </ul>
+    </section>
+
+    <!-- How BFS Works Section -->
+    <section id="how-it-works">
+        <h2>How BFS Works</h2>
+        <ol>
+            <li><b>Start from the Source Node:</b> The algorithm starts from a given node and enqueues it (adds it to the queue).</li>
+            <li><b>Visit Neighbors:</b> For the node at the front of the queue, visit all its unvisited neighbors and enqueue them.</li>
+            <li><b>Dequeue and Repeat:</b> Dequeue the current node, then repeat the process for the next node in the queue until all nodes are visited.</li>
+        </ol>
+    </section>
+
+    <!-- BFS Algorithm Section -->
+    <section id="algorithm">
+        <h2>BFS Algorithm</h2>
+        <ol>
+            <li><b>Initialization:</b>
+                <ul>
+                    <li>Mark all nodes as unvisited.</li>
+                    <li>Add the source node to the queue and mark it as visited.</li>
+                </ul>
+            </li>
+            <li><b>While the queue is not empty:</b>
+                <ul>
+                    <li>Dequeue the front node.</li>
+                    <li>Visit all its adjacent nodes. If a node has not been visited, mark it as visited and enqueue it.</li>
+                </ul>
+            </li>
+            <li><b>Repeat until the queue is empty.</b></li>
+        </ol>
+    </section>
+
+    <!-- BFS Example Section -->
+    <section id="example">
+        <h2>BFS Example (Graph)</h2>
+        <p>
+            Consider the following graph:
+        </p>
+        <pre>
+    A
+   / \
+  B   C
+ / \   \
+D   E   F
+        </pre>
+        <p>
+            - Start from node <b>A</b>.
+            - BFS first visits all nodes directly connected to <b>A</b>: nodes <b>B</b> and <b>C</b>.
+            - Then, it visits all nodes connected to <b>B</b> and <b>C</b>, i.e., nodes <b>D</b>, <b>E</b>, and <b>F</b>.
+        </p>
+        <p>
+            The BFS traversal order for this graph is: <b>A → B → C → D → E → F</b>.
+        </p>
+    </section>
+
+    <!-- Applications of BFS Section -->
+    <section id="applications">
+        <h2>Applications of BFS</h2>
+        <ul>
+            <li><b>Shortest Path in an Unweighted Graph:</b> BFS is used to find the shortest path from the source node to any other node.</li>
+            <li><b>Web Crawlers:</b> Search engines use BFS to explore all the links on a web page.</li>
+            <li><b>Social Networks:</b> BFS can be used to find the shortest degree of separation between people (e.g., friends-of-friends).</li>
+            <li><b>Solving Puzzles and Games:</b> BFS can explore possible moves in puzzles or games (like solving a maze).</li>
+        </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section id="visualization">
+        <h2>Visualization</h2>
+        <p>Click the button below to load the visualization animation.</p>
+        <button type="submit" onclick="loadVisualization()">Load Visualization</button>
+        <div id="visualization-container">
+            The iframe will be inserted here.
+        </div>
+    </section>
+
+    <!-- Video Section
+    <section id="video">
+        <h2>Video Explanation</h2>
+        <iframe width="560" height="315" id="youtube_vid" src="https://www.youtube.com/embed/_bxGETubiKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section> -->
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Quiz: Test Your Knowledge</h2>
+        <p>Want to test your knowledge about BFS? Click the button below to start the quiz!</p>
+        <button class="button" onclick="window.location.href='bfsquiz.html'">Start Quiz</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Data Structures Notes. All rights reserved.</p>
+        <p>Contact: Dr. Bomma Rama Krishna</p>
+    </footer>
+
+    <!-- Link to JavaScript file for visualization and quiz logic -->
+    <script src="dsa.js"></script>
+</body>
+
+</html>
