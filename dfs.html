@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depth-First Search (DFS) in Data Structures</title>
+    <!-- Link to a single shared stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 style="font-weight: bolder;">Depth-First Search (DFS) in Data Structures</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <h2>What is Depth-First Search (DFS)?</h2>
+        <p>
+            <b>Depth-First Search (DFS)</b> is an algorithm for traversing or searching tree or graph data structures. It explores as far as possible along each branch before backtracking, using a stack to keep track of nodes to visit.
+        </p>
+    </section>
+
+    <!-- Key Concepts of DFS Section -->
+    <section id="key-concepts">
+        <h2>Key Concepts of DFS</h2>
+        <ul>
+            <li><b>Backtracking:</b> DFS explores a path until it cannot go further, then backtracks to explore other paths.</li>
+            <li><b>Stack:</b> DFS can be implemented using a stack (either explicitly or through recursion) to keep track of nodes.</li>
+            <li><b>Path Exploration:</b> DFS can be used to find paths in graphs and trees, including cycles and connected components.</li>
+        </ul>
+    </section>
+
+    <!-- How DFS Works Section -->
+    <section id="how-it-works">
+        <h2>How DFS Works</h2>
+        <ol>
+            <li><b>Start from the Source Node:</b> The algorithm starts from a given node and pushes it onto the stack.</li>
+            <li><b>Visit Neighbors:</b> For the node on the top of the stack, visit an unvisited neighbor, push it onto the stack.</li>
+            <li><b>Backtrack:</b> If there are no unvisited neighbors, pop the stack and repeat the process until all nodes are visited.</li>
+        </ol>
+    </section>
+
+    <!-- DFS Algorithm Section -->
+    <section id="algorithm">
+        <h2>DFS Algorithm</h2>
+        <ol>
+            <li><b>Initialization:</b>
+                <ul>
+                    <li>Mark all nodes as unvisited.</li>
+                    <li>Add the source node to the stack and mark it as visited.</li>
+                </ul>
+            </li>
+            <li><b>While the stack is not empty:</b>
+                <ul>
+                    <li>Pop the top node from the stack.</li>
+                    <li>Visit all its adjacent nodes. If a node has not been visited, mark it as visited and push it onto the stack.</li>
+                </ul>
+            </li>
+            <li><b>Repeat until the stack is empty.</b></li>
+        </ol>
+    </section>
+
+    <!-- DFS Example Section -->
+    <section id="example">
+        <h2>DFS Example (Graph)</h2>
+        <p>
+            Consider the following graph:
+        </p>
+        <pre>
+    A
+   / \
+  B   C
+ / \
+D   E
+        </pre>
+        <p>
+            - Start from node <b>A</b>.
+            - DFS first visits <b>A</b>, then goes to <b>B</b>, then to <b>D</b>, backtracks to <b>B</b>, visits <b>E</b>, and finally backtracks to <b>A</b>, and visits <b>C</b>.
+        </p>
+        <p>
+            The DFS traversal order for this graph is: <b>A → B → D → E → C</b>.
+        </p>
+    </section>
+
+    <!-- Applications of DFS Section -->
+    <section id="applications">
+        <h2>Applications of DFS</h2>
+        <ul>
+            <li><b>Path Finding:</b> DFS can be used to find a path between two nodes in a graph.</li>
+            <li><b>Topological Sorting:</b> DFS is used in topological sorting of directed acyclic graphs (DAGs).</li>
+            <li><b>Cycle Detection:</b> DFS can detect cycles in directed and undirected graphs.</li>
+            <li><b>Solving Puzzles and Games:</b> DFS can explore possible moves in puzzles or games (like mazes).</li>
+        </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section id="visualization">
+        <h2>Visualization</h2>
+        <p>Click the button below to load the visualization animation.</p>
+        <button type="submit" onclick="loadVisualization()">Load Visualization</button>
+        <div id="visualization-container">
+            The iframe will be inserted here.
+        </div>
+    </section>
+
+    <!-- Video Section -->
+<!--     <section id="video">
+        <h2>Video Explanation</h2>
+        <iframe width="560" height="315" id="youtube_vid" src="https://www.youtube.com/embed/9Y9xQyE8Y7E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section> -->
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Quiz: Test Your Knowledge</h2>
+        <p>Want to test your knowledge about DFS? Click the button below to start the quiz!</p>
+        <button class="button" onclick="window.location.href='dfsquiz.html'">Start Quiz</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Data Structures Notes. All rights reserved.</p>
+        <p>Contact: Dr. Bomma Rama Krishna</p>
+    </footer>
+
+    <!-- Link to JavaScript file for visualization and quiz logic -->
+    <script src="dsa.js"></script>
+</body>
+
+</html>
 
